@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Résultat</title>
+</head>
+<body>
+    <h1>Résultat</h1>
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Adresse</th>
+            <th>Image</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td><img src="data:image/png;base64,{{ row[4] }}" alt="Image"></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
